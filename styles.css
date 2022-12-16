@@ -1,0 +1,417 @@
+body {
+    font-family: 'Muli';
+}
+
+
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.active {
+background-color: #4CAF50;
+color: white;
+}
+
+.topnav .icon {
+display: none;
+}
+
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+float: right;
+display: block;
+}
+}
+
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+position: absolute;
+right: 0;
+top: 0;
+}
+.topnav.responsive a {
+float: none;
+display: block;
+text-align: left;
+}
+}
+
+.footer-distributed{
+background-color: #292c2f;
+box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+font: normal 16px sans-serif;
+
+padding: 45px 50px;
+margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+color:  #8f9296;
+font-size: 14px;
+margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+font-size:18px;
+font-weight: bold;
+color:  #ffffff;
+margin: 0 0 10px;
+padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+display:inline-block;
+line-height: 1.8;
+text-decoration: none;
+color:  inherit;
+}
+
+.footer-distributed .footer-right{
+float: right;
+margin-top: 6px;
+max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+display: inline-block;
+width: 35px;
+height: 35px;
+background-color:  #33383b;
+border-radius: 2px;
+
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+line-height: 35px;
+
+margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-right{
+    text-align: center;
+}
+
+.footer-distributed .footer-right{
+    float: none;
+    margin: 0 auto 20px;
+}
+
+.footer-distributed .footer-left p.footer-links{
+    line-height: 1.8;
+}
+}
+
+/*!
+light-modal v1.1.0: A new lightweight css modal.
+(c) 2017 
+MIT License
+git+https://github.com/hunzaboy/Light-Modal.git
+*/
+.light-modal {
+display: none;
+position: fixed;
+background: transparent;
+top: 0;
+bottom: 0;
+left: 0;
+-ms-flex-align: center;
+  align-items: center;
+-ms-flex-pack: center;
+  justify-content: center;
+right: 0;
+z-index: 9000;
+transition: background 1s;
+font-size: 16px;
+visibility: hidden;
+}
+
+.light-modal-content {
+background: #240457;
+color: #fff;
+width: 30vw;
+border-radius: .2em;
+position: relative;
+max-height: calc(100vh - 150px);
+line-height: 1.4;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.light-modal-content img {
+max-width: 100%;
+border-radius: .2em;
+}
+
+.light-modal-content.large-content {
+width: 50vw;
+}
+
+.light-modal-header {
+padding: 20px 20px 20px 20px;
+background: rgba(0, 0, 0, 0.2);
+display: -ms-flexbox;
+display: flex;
+-ms-flex-pack: justify;
+  justify-content: space-between;
+-ms-flex-align: center;
+  align-items: center;
+}
+
+.light-modal-heading {
+margin: 0;
+font-size: 1.5em;
+}
+
+.light-modal-heading + .light-modal-close-icon {
+position: static;
+}
+
+.light-modal-body {
+padding: 20px;
+overflow: auto;
+max-height: 450px;
+}
+
+.light-modal-footer {
+padding: 20px 20px 20px 20px;
+background: rgba(0, 0, 0, 0.2);
+text-align: right;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-align: center;
+  align-items: center;
+}
+
+.light-modal-close-icon, .light-modal-close-btn {
+text-decoration: none;
+color: #fff;
+padding: 5px 10px;
+border-radius: .2em;
+background: rgb(207, 6, 53);
+font-size: 1.5em;
+line-height: 1;
+transition: background .2s ease-in-out;
+}
+
+.light-modal-close-icon:hover, .light-modal-close-btn:hover {
+background: rgb(207, 6, 53);
+}
+
+.light-modal-close-icon {
+position: absolute;
+top: -15px;
+right: -15px;
+}
+
+.light-modal-close-btn {
+font-size: 1em;
+}
+
+.light-modal-caption {
+position: absolute;
+left: 50%;
+-ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+top: 100%;
+padding: 10px 0;
+background: rgba(0, 0, 0, 0.2);
+border-radius: .2em;
+width: 100%;
+text-align: center;
+margin-top: 5px;
+}
+
+.light-modal:target {
+background: rgba(0, 0, 0, 0.5);
+display: -ms-flexbox;
+display: flex;
+visibility: visible;
+}
+
+.light-modal-navigation .navigation-next,
+.light-modal-navigation .navigation-prev {
+width: 32px;
+height: 32px;
+border-color: #fff;
+transition: border-color .2s;
+}
+
+.light-modal-navigation .navigation-next:hover,
+.light-modal-navigation .navigation-prev:hover {
+border-color: rgba(255, 255, 255, 0.7);
+}
+
+.light-modal-navigation .navigation-next {
+position: absolute;
+right: -50px;
+top: 50%;
+border-bottom: 1px solid;
+border-left: 1px solid;
+-ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.light-modal-navigation .navigation-prev {
+position: absolute;
+left: -50px;
+top: 50%;
+border-bottom: 1px solid;
+border-left: 1px solid;
+-ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 480px) {
+.light-modal-navigation .navigation-next {
+right: 5px;
+}
+.light-modal-navigation .navigation-prev {
+left: 5px;
+}
+}
+
+@keyframes basic {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+.basic {
+animation-name: basic;
+}
+
+.btns {
+width:10%
+}
+
+@media (max-width: 767px) {
+.light-modal {
+font-size: 14px;
+}
+.btns {
+  width:20%
+}
+.light-modal:target .light-modal-content {
+width: 70vw;
+}
+.light-modal-body {
+font-size: 1.1rem;
+}
+}
+
+@supports (display: flex) {
+@media (max-width: 767px) {
+.light-modal:target .light-modal-content {
+  width: 70vw;
+}
+}
+}
+a:hover{
+color: grey;
+}
+
+.skillbar {
+position:relative;
+display:block;
+margin-bottom:15px;
+width:100%;
+background:#eee;
+height:35px;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+-webkit-transition:0.4s linear;
+-moz-transition:0.4s linear;
+-ms-transition:0.4s linear;
+-o-transition:0.4s linear;
+transition:0.4s linear;
+-webkit-transition-property:width, background-color;
+-moz-transition-property:width, background-color;
+-ms-transition-property:width, background-color;
+-o-transition-property:width, background-color;
+transition-property:width, background-color;
+}
+
+.skillbar-title {
+position:absolute;
+top:0;
+left:0;
+width:110px;
+font-weight:bold;
+font-size:13px;
+color:#ffffff;
+background:#6adcfa;
+-webkit-border-top-left-radius:3px;
+-webkit-border-bottom-left-radius:4px;
+-moz-border-radius-topleft:3px;
+-moz-border-radius-bottomleft:3px;
+border-top-left-radius:3px;
+border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+display:block;
+background:rgba(0, 0, 0, 0.1);
+padding:0 20px;
+height:35px;
+line-height:35px;
+-webkit-border-top-left-radius:3px;
+-webkit-border-bottom-left-radius:3px;
+-moz-border-radius-topleft:3px;
+-moz-border-radius-bottomleft:3px;
+border-top-left-radius:3px;
+border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+height:35px;
+width:0px;
+background:#6adcfa;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+position:absolute;
+right:10px;
+top:0;
+font-size:11px;
+height:35px;
+line-height:35px;
+color:#ffffff;
+color:rgba(0, 0, 0, 0.4);
+}
